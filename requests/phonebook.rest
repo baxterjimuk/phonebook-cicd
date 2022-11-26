@@ -1,0 +1,17 @@
+DELETE http://localhost:3001/api/persons/927cc50c48a08cd31331265d
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name":"Jack Dawson",
+    "number":"123-45"
+}
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name":"Rose Dewitt",
+    "number":"67-890"
+}
