@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [master]
     types: [opened, synchronize]
-# some comments
+# comment to trigger pull request for 11.21
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
