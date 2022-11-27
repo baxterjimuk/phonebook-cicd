@@ -29,10 +29,12 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "shielded-hollows-23366"
           heroku_email: "baxterjimuk@gmail.com"
-          env_file: "/.env"
           healthcheck: "https://shielded-hollows-23366.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
+        env:
+          HD_MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          HD_PORT: ${{ secrets.PORT }}
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
